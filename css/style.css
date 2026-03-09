@@ -7,8 +7,152 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
 }
-.container {
-  padding: 2rem 2rem;
+
+/* ================================
+   CONFIGURAÇÕES GERAIS
+================================ */
+
+/* Configurações do link associar*/
+#btn-associar{
+    text-decoration: none;
+}
+#btn-associar:hover{
+    text-decoration: underline;
+}
+/* Centraliza o conteúdo das seções */
+.container{
+    max-width:1200px;
+    margin:auto;
+    padding:60px 20px;
 }
 
+/* Títulos das seções */
+section h2{
+    font-size:32px;
+    color:#1B1F55;
+    margin-bottom:20px;
+}
 
+/* Parágrafos */
+section p{
+    color:#4C4F75;
+    line-height:1.6;
+    margin-bottom:15px;
+}
+
+/* ================================
+   SEÇÃO SOBRE
+================================ */
+
+.sobre{
+    background:#ffffff;
+}
+
+.sobre h2{
+    text-align:center;
+}
+
+.sobre p{
+    font-size:17px;
+}
+
+/* ================================
+   SEÇÃO BENEFÍCIOS
+================================ */
+
+.beneficius{
+    background:#f5f6fb;
+    text-align:center;
+}
+
+.beneficius h2{
+    color:#131B80;
+}
+
+.beneficius p{
+    max-width:800px;
+    margin:auto;
+    color:#4C4F75;
+}
+
+/* ================================
+   SEÇÃO CONTATO
+================================ */
+
+.contato{
+    background:#1B1F55;
+    color:white;
+}
+
+.contato h2{
+    color:white;
+    text-align:center;
+}
+
+.contato p{
+    text-align:center;
+    color:#d9d9ff;
+}
+
+/* ================================
+   FORMULÁRIO
+================================ */
+
+.contato form{
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+    max-width:500px;
+    margin:30px auto;
+}
+
+/* Labels */
+.contato label{
+    font-weight:500;
+}
+
+/* Campos do formulário */
+.contato input,
+.contato textarea{
+    padding:10px;
+    border-radius:6px;
+    border:none;
+    outline:none;
+}
+
+/* Área de texto */
+.contato textarea{
+    resize:none;
+    height:120px;
+}
+
+/* Botão enviar */
+.contato button{
+    background:#131B80;
+    color:white;
+    border:none;
+    padding:12px;
+    border-radius:6px;
+    cursor:pointer;
+    font-weight:600;
+    transition:0.3s;
+}
+
+/* Hover botão */
+.contato button:hover{
+    background:#4D53A0;
+}
+
+/* ================================
+   INFORMAÇÕES DE CONTATO
+================================ */
+
+.info-contato{
+    text-align:center;
+    margin-top:30px;
+    color:#d9d9ff;
+}
+
+.info-contato p{
+    margin:5px 0;
+}
