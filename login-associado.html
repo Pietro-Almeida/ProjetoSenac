@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-     <header class="header">
+  <header class="header">
   <!-- Logo -->
   <div class="logo">
     <img src="logo.png" alt="Logo AMAS">
@@ -32,14 +32,15 @@
       <a href="login-empresario.html">Empresário</a>
     </div>
   </div>
-</header>
+  </header>
+
+  <div class="login-container">
+    <h2>Login do Associado</h2>
+    <p>Acesse sua área para acompanhar contribuições e situação financeira.</p>
+    <input type="text" id="cpf" placeholder="Digite seu CPF">
+    <input type="password" id="senha" placeholder="Digite sua senha">
+    <button onclick="loginAssociado()">Entrar</button>
+  </div>
+<script src="js/associado.js"></script>
 </body>
 </html>
-
-<!--<form ><label for="Associado">CPF do associado:</label>
-     <input type="text" id="associado" associado="Associado"><br>
-     <label for="Email">Email do associado:</label>
-     <input type="text" id="EmailAssociado" emailassociado="EmailAssociado"><br>
-     <label for="SenhaDoAssociado">Senha:</label>
-     <input type="text" id="Senha" senha="SenhaDoAssociado"><br>
-     </form>-->
