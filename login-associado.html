@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>AMAS</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="header">
+  <!-- Logo -->
+  <div class="logo">
+    <img src="logo.png" alt="Logo AMAS">
+  </div>
+  <!-- Menu -->
+  <nav class="menu">
+    <a href="index.html">Início</a>
+    <a href="#sobre">Sobre</a>
+    <a href="#beneficios">Benefícios</a>
+    <a href="#contato">Contato</a>
+  </nav>
+  
+  <!-- Ações -->
+  <div class="login-menu">
+    <!-- Botão Dark/Light -->
+    <button id="toggle-theme">🌙</button>
+    <!-- Botão Login -->
+    <button class="btn-login">Login</button>
+    <div class="login-opcoes">
+      <a href="login-admin.html">Administrador</a>
+      <a href="login-associado.html">Associado</a>
+      <a href="login-empresario.html">Empresário</a>
+    </div>
+  </div>
+  </header>
+
+  <div class="login-container">
+    <h2>Login do Associado</h2>
+    <p>Acesse sua área para acompanhar contribuições e situação financeira.</p>
+    <input type="text" id="cpf" placeholder="Digite seu CPF">
+    <input type="password" id="senha" placeholder="Digite sua senha">
+    <button onclick="loginAssociado()">Entrar</button>
+  </div>
+<script src="js/associado.js"></script>
+</body>
+</html>

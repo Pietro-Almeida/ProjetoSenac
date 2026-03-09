@@ -1,0 +1,154 @@
+/* ================================
+   HEADER / NAVEGAÇÃO
+================================ */
+
+/* Estrutura principal do header */
+.header{
+    background-color: #1B1F55; /* Azul principal */
+    display: flex;
+    align-items: center; /* Alinha verticalmente */
+    justify-content: space-between; /* Espaço entre logo, menu e ações */
+    padding: 16px 40px;
+}
+
+/* ================================
+   LOGO
+================================ */
+
+.logo img{
+    height: 50px; /* Define altura da logo */
+}
+
+/* ================================
+   MENU DE NAVEGAÇÃO
+================================ */
+
+.menu{
+    display: flex; /* Menu em linha */
+    gap: 30px; /* Espaçamento entre links */
+}
+
+.menu a{
+    text-decoration: none; /* Remove sublinhado */
+    color: #FFFFFF; /* Texto branco */
+    font-weight: 500;
+    font-size: 16px;
+    transition: 0.3s; /* Animação suave no hover */
+}
+
+/* Cor quando passa o mouse */
+.menu a:hover{
+    color: #4D53A0; /* Azul médio */
+}
+
+/* ================================
+   ÁREA DE AÇÕES (botões do header)
+================================ */
+
+.acoes-header{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+/* Área de ações (dark mode e login) */
+.acoes{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* ================================
+   BOTÃO DARK / LIGHT MODE
+================================ */
+
+#toggle-theme{
+    background-color: transparent;
+    border: 2px solid #4C4F75; /* Cinza azulado */
+    color: #FFFFFF;
+    padding: 6px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* Hover do botão dark mode */
+#toggle-theme:hover{
+    background-color: #4C4F75;
+}
+
+/* Botão alternativo de tema */
+.theme-btn{
+  background:#4D53A0; /* Azul médio */
+  color:white;
+  border:none;
+  padding:10px;
+  border-radius:6px;
+  cursor:pointer;
+}
+
+/* ================================
+   MENU DE LOGIN
+================================ */
+
+/* Container do botão login */
+.login-menu{
+  position:relative; /* Necessário para o dropdown */
+}
+
+/* Botão principal de login */
+.login-btn{
+  background:#1B1F55;
+  color:white;
+  border:none;
+  padding:10px 20px;
+  border-radius:6px;
+  cursor:pointer;
+}
+
+/* Menu dropdown com opções de login */
+.login-opcoes{
+  display:none; /* Escondido inicialmente */
+  position:absolute;
+  background:white;
+  min-width:170px;
+  box-shadow:0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* Links dentro do dropdown */
+.login-opcoes a{
+  display:block;
+  padding:10px;
+  text-decoration:none;
+  color:#2A2A33; /* Cinza escuro */
+}
+
+/* Hover nas opções do login */
+.login-opcoes a:hover{
+  background:#f0f0f0;
+}
+
+/* Mostra o menu ao passar o mouse */
+.login-menu:hover .login-opcoes{
+  display:block;
+}
+
+/* ================================
+   BOTÃO LOGIN
+================================ */
+
+.btn-login{
+    text-decoration: none;
+    background-color: #131B80; /* Azul destaque */
+    color: #FFFFFF;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-weight: 500;
+    transition: 0.3s;
+    border: none;
+}
+
+/* Hover botão login */
+.btn-login:hover{
+    background-color: #4D53A0; /* Azul médio */
+}
