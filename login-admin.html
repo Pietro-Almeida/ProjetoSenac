@@ -7,49 +7,33 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header class="header">
-  <!-- Logo -->
-  <div class="logo">
-    <img src="logo.png" alt="Logo AMAS">
-  </div>
-  <!-- Menu -->
-  <nav class="menu">
-    <a href="index.html">Início</a>
-    <a href="#">Sobre</a>
-    <a href="#">Benefícios</a>
-    <a href="#">Contato</a>
-  </nav>
-  <!-- Ações -->
-  <div class="acoes">
-    <!-- Botão Dark/Light -->
-    <button id="toggle-theme">🌙</button>
-    <!-- Botão Login -->
-    <a href="#" class="btn-login">Login</a>
-  </div>
+  <header class="header">
+    <!-- Logo -->
+    <div class="logo">
+      <img src="logo.png" alt="Logo AMAS">
+    </div>
+    <!-- Menu -->
+    <nav class="menu">
+      <a href="index.html">Início</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#beneficios">Benefícios</a>
+      <a href="#contato">Contato</a>
+    </nav>
+    <!-- Ações -->
+    <div class="acoes">
+      <!-- Botão Dark/Light -->
+      <button id="toggle-theme">🌙</button>
+      <!-- Botão Login -->
+      <button href="#" class="btn-login">Login</button>
+    </div>
 </header>
-    <form> 
-    <label for="nomeCompleto">Nome completo:</label>
-     <input type="text" id="nomeCompleto" nome="nomeCompleto">
-     <label for="CPF">Seu CPF:</label>
-     <input type="text" id="CPF" cpf="CPF">
-     <label for="DataNascimento">DataDeNascimento:</label>
-     <input type="text" id="DataNascimento" datanascimento="DataNascimento">
-     <label for="Telefone">Telefone:</label>
-     <input type="text" id="telefone" telefone="Telefone">
-     <label for="Email">Seu Email:</label>
-     <input type="text" id="Email" email="Email">
-     <label for="Endereço">Endereço:</label>
-     <input type="text" id="Endereço" endereço="Endereço">
-     <label for="Profissão">Sua profissão:</label>
-     <input type="text" id="Profissão" profissão="Profissão">
-     <label for="MotivoAssociar">Qual o motivo para se associar?</label>
-     <input type="text" id="MotivoAssociar" motivoassociar="MotivoAssociar">
-     </form>
-
-     <a href="index.html">index</a>
-<a href="associado.html">associado</a>
-<a href="admin.html">admin</a>
-<a href="empresario.html">empresario</a>
-<a href="login.html">login</a>
+    <div class="login-container">
+      <h2>Login do Administrador</h2>
+      <p>Acesso restrito ao painel administrativo.</p>
+      <input type="text" id="usuario" placeholder="Usuário">
+      <input type="password" id="senha" placeholder="Senha">
+      <button onclick="loginAdmin()">Entrar</button>
+    </div>
+<script src="js/admin.js"></script>
 </body>
 </html>
