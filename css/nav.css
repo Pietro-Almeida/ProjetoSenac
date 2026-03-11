@@ -4,7 +4,7 @@
 
 /* Estrutura principal do header */
 .header{
-    background-color: #1B1F55; /* Azul principal */
+    background-color: var(--cor-header); /* Azul principal */
     display: flex;
     align-items: center; /* Alinha verticalmente */
     justify-content: space-between; /* Espaço entre logo, menu e ações */
@@ -30,15 +30,15 @@
 
 .menu a{
     text-decoration: none; /* Remove sublinhado */
-    color: #FFFFFF; /* Texto branco */
-    font-weight: 500;
-    font-size: 16px;
+    color: var(--cor-link-menu);
+    font-weight: 600;
+    font-size: 1rem;
     transition: 0.3s; /* Animação suave no hover */
 }
 
 /* Cor quando passa o mouse */
 .menu a:hover{
-    color: #4D53A0; /* Azul médio */
+    color: var(--cor-hover); /* Azul médio */
 }
 
 /* ================================
@@ -63,11 +63,13 @@
 ================================ */
 
 #toggle-theme{
-    background-color: transparent;
-    border: 2px solid #4C4F75; /* Cinza azulado */
+    color: var(--cor-texto);
+    background-color: var(--cor-link-menu);
+    border: 2px solid var(--cor-borda); /* Cinza azulado */
     color: #FFFFFF;
-    padding: 6px 10px;
     border-radius: 6px;
+    height: 33px;
+    width: 33px;
     cursor: pointer;
     transition: 0.3s;
 }
@@ -98,8 +100,9 @@
 
 /* Botão principal de login */
 .login-btn{
-  background:#1B1F55;
+  background-color: var(--cor-login);
   color:white;
+  font-weight: bolder;
   border:none;
   padding:10px 20px;
   border-radius:6px;

@@ -7,29 +7,27 @@
 }
 body {
   font-family: Arial, Helvetica, sans-serif;
+  background: var(--cor-fundo);
+  color: var(--cor-texto);
 }
-:root {
     /* CORES PRINCIPAIS DO PROJETO */
-
-    --azul-principal: #1B1F55;
-    --azul-medio: #4D53A0;
-    --azul-destaque: #131B80;
-
-    --cinza-azulado: #4C4F75;
-    --cinza-claro: #6C6E84;
-    --cinza-escuro: #2A2A33;
-
-    /* CORES GERAIS */
-
-    --background: #ffffff;
-    --texto: #2A2A33;
-    --card: #f5f5f5;
-
+:root{
+    --cor-link-menu: #a1a6f2;
+    --cor-header: #1B1F55;
+  --cor-texto: #1B1F55;
+  --cor-hover: #4D53A0;
+  --cor-borda: #4C4F75;
+  --cor-login: #131B80;
+  --cor-fundo: #ffffff;
 }
-body.dark{
-    --background: #2A2A33;
-    --texto: #ffffff;
-    --card: #4C4F75;
+body.black{
+    --cor-link-menu:#131B80;
+  --cor-header: #D0D3FF;     /* Azul profundo elegante */
+  --cor-texto: #F1F3FF;      /* Branco suave (melhor para leitura) */
+  --cor-hover: #7C82FF;      /* Azul vivo para interações */
+  --cor-borda: #2A2F6A;      /* Bordas discretas */
+  --cor-login: #5A61FF;      /* Botão destaque */
+  --cor-fundo: #14173a;      /* Fundo principal escuro */
 }
 
 /* ================================
@@ -39,6 +37,8 @@ body.dark{
 /* Configurações do link associar*/
 #btn-associar{
     text-decoration: none;
+    color: var(--cor-texto);
+    font-weight: bold;
 }
 #btn-associar:hover{
     text-decoration: underline;
@@ -51,15 +51,15 @@ body.dark{
 }
 
 /* Títulos das seções */
-section h2{
-    font-size:32px;
-    color:#1B1F55;
+section, h1 h2{
+    font-size: 1.3rem;
+    color:var(--cor-header);
     margin-bottom:20px;
 }
 
 /* Parágrafos */
 section p{
-    color:#4C4F75;
+    color:var(--cor-texto);
     line-height:1.6;
     margin-bottom:15px;
 }
@@ -69,7 +69,7 @@ section p{
 ================================ */
 
 .sobre{
-    background:#ffffff;
+    background:var(--cor-fundo);
 }
 
 .sobre h2{
@@ -85,18 +85,18 @@ section p{
 ================================ */
 
 .beneficius{
-    background:#f5f6fb;
+    background:var(--cor-fundo);
     text-align:center;
 }
 
 .beneficius h2{
-    color:#131B80;
+    color:var(--cor-header);
 }
 
 .beneficius p{
     max-width:800px;
     margin:auto;
-    color:#4C4F75;
+    color:var(--cor-texto);
 }
 
 /* ================================
@@ -152,7 +152,7 @@ section p{
 
 /* Botão enviar */
 .contato button{
-    background:#131B80;
+    background:var(--cor-login);
     color:white;
     border:none;
     padding:12px;
@@ -177,6 +177,6 @@ section p{
     color:#d9d9ff;
 }
 
-.info-contato p{
-    margin:5px 0;
+.info-contato p {
+    margin:5px 0px;
 }
