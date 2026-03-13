@@ -6,7 +6,7 @@ const email = document.getElementById("Email");
 const endereço = document.getElementById("Endereço");
 const profissão = document.getElementById("Profissão");
 
-function loginAdmin() {
+export function loginAdmin() {
 
     const usuario = document.getElementById("usuario").value;
     const senha = document.getElementById("senha").value;
