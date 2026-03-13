@@ -1,10 +1,12 @@
 import { loginAdmin } from "./admin.js";
 import { loginAssociado } from "./associado.js";
+import { loginEmpresario } from "./empresario.js";
 
 const body = document.body
 const btnTema = document.getElementById("toggle-theme")
 const buttonLoginAdmin = document.getElementById("loginAdmin")
 const buttonLoginAssociado = document.getElementById("loginAssociado")
+const buttonLoginEmpresario = document.getElementById("loginEmpresario")
 
 btnTema.addEventListener("click", ()=> {
   document.body.classList.toggle("black")
@@ -18,6 +20,11 @@ if(buttonLoginAdmin)
 if(buttonLoginAssociado){
   buttonLoginAssociado.addEventListener("click", ()=>{
     loginAssociado();
+  })
+}
+if(buttonLoginEmpresario){
+  buttonLoginEmpresario.addEventListener("click", ()=>{
+    loginEmpresario();
   })
 }
 
