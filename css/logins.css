@@ -14,7 +14,9 @@ flex-direction:column;
 gap:15px;
 
 }
-
+.login-container h2, p{
+  color: #1B1F55;
+}
 .login-container input{
 
 padding:10px;
