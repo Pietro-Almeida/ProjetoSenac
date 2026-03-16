@@ -9,11 +9,11 @@
 
 <body>
 
-<!-- CABEÇALHO -->
-<header class="header">
+<!-- SIDEBAR -->
+<aside class="sidebar">
 
   <div class="logo">
-    <img src="logo.png" alt="Logo AMAS">
+    <img src="" alt="Logo AMAS">
   </div>
 
   <nav class="menu">
@@ -25,10 +25,9 @@
 
   <div class="login-menu">
     <button id="toggle-theme">🌙</button>
-    <button class="btn-login">Área do Empresário</button>
   </div>
 
-</header>
+</aside>
 
 <!-- BANNER -->
 <section class="banner container">
@@ -48,8 +47,12 @@
 <form class="form-consulta">
 
 <label>Nome do Associado</label>
-<input type="text" placeholder="Digite o nome do associado">
-
+<input type="text" placeholder="Digite o nome do associado" required>
 <label>CPF</label>
-<input type="text" placeholder="000.000.000-0
+<input type="text" placeholder="000.000.000-00" required>
+<button id="loginEmpresario" type="submit">Consultar</button>
+</form>
+</section>
 <script type="module" src="js/main.js"></script>
+</body>
+</html>
