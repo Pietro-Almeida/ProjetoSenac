@@ -43,7 +43,7 @@ background:#3a3ab4;
 background:#3a3ab4;
 }
 
-/* CONTEUDO */
+/* CONTEÚDO */
 
 .content{
 flex:1;
@@ -95,34 +95,23 @@ th{
 background:#f7f8fc;
 }
 
-/* TAGS */
-
-.tag{
-padding:4px 10px;
-border-radius:12px;
-font-size:12px;
-}
-
-.pago{
-background:#d8f5df;
-color:#1a8f4d;
-}
-
-.pendente{
-background:#ffe6c9;
-color:#cc6a00;
-}
-
 /* FORM */
 
 .form{
 background:white;
 padding:20px;
 border-radius:10px;
-width:350px;
+width:400px;
 }
 
 .form input{
+width:100%;
+padding:8px;
+margin-top:8px;
+margin-bottom:10px;
+}
+
+.form textarea{
 width:100%;
 padding:8px;
 margin-top:8px;

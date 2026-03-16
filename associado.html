@@ -1,132 +1,200 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
+
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Cadastro de Associado - AMAS</title>
-<link rel="stylesheet" href="css/style.css">
+<title>Painel do Associado</title>
+<link rel="stylesheet" href="css/associado.css">
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
 </head>
 
 <body>
 
-<!-- CABEÇALHO -->
-<header class="header">
+<div class="sidebar">
 
-  <div class="logo">
-    <img src="logo.png" alt="Logo AMAS">
-  </div>
+<h2>Área do Associado</h2>
 
-  <nav class="menu">
-    <a href="index.html">Início</a>
-    <a href="#cadastro">Cadastro</a>
-    <a href="#dados">Meus Dados</a>
-    <a href="#contato">Contato</a>
-  </nav>
+<ul class="menu">
 
-  <div class="login-menu">
-    <button id="toggle-theme">🌙</button>
-    <button class="btn-login">Área do Associado</button>
-  </div>
+<li onclick="showPage('painel')" class="active">Meu Painel</li>
+<li onclick="showPage('pagamentos')">Meus Pagamentos</li>
+<li onclick="showPage('contribuicoes')">Minhas Contribuições</li>
+<li onclick="showPage('dados')">Atualizar Dados</li>
+<li>Sair</li>
 
-</header>
+</ul>
 
-<!-- BANNER -->
-<section class="banner container">
-  <div class="banner-texto">
-    <h1>Cadastro de Associado</h1>
-    <p>
-      Preencha os dados abaixo para se tornar um associado da AMAS.
-    </p>
-  </div>
-</section>
+</div>
 
-<!-- FORMULÁRIO -->
-<section id="cadastro" class="container">
+<div class="content">
 
-<h2>Informações do Associado</h2>
+<!-- MEU PAINEL -->
 
-<form class="form-associado">
+<div id="painel" class="page active">
 
-<label>Nome</label>
-<input type="text" placeholder="Digite seu nome completo" required>
+<h1>Bem-vindo, João Silva</h1>
 
-<label>CPF</label>
-<input type="text" placeholder="000.000.000-00" required>
+<div class="cards">
 
-<label>Data de Nascimento</label>
-<input type="date" required>
+<div class="card">
+<h3>Status da Associação</h3>
+<p style="color:green;">Ativo</p>
+</div>
 
-<label>Telefone</label>
-<input type="tel" placeholder="(61) 99999-9999">
+<div class="card">
+<h3>Total Contribuído</h3>
+<p>R$1200</p>
+</div>
 
-<label>Email</label>
-<input type="email" placeholder="Digite seu email">
+<div class="card">
+<h3>Próximo Pagamento</h3>
+<p>09/04/2026</p>
+</div>
 
-<label>Endereço</label>
-<input type="text" placeholder="Rua, número, bairro, cidade">
+</div>
 
-<label>Data de Entrada</label>
-<input type="date">
+<div class="chart">
 
-<label>Status</label>
-<select>
-<option>Ativo</option>
-<option>Inativo</option>
-<option>Pendente</option>
-</select>
+<canvas id="grafico"></canvas>
 
-<button type="submit">Cadastrar Associado</button>
+</div>
 
-</form>
+</div>
 
-</section>
+<!-- PAGAMENTOS -->
 
-<!-- DADOS DO ASSOCIADO -->
-<section id="dados" class="container">
+<div id="pagamentos" class="page">
 
-<h2>Dados do Associado</h2>
+<h1>Meus Pagamentos</h1>
 
-<table border="1" width="100%">
+<table>
 
-<thead>
 <tr>
-<th>Nome</th>
-<th>CPF</th>
-<th>Telefone</th>
-<th>Email</th>
+<th>Mês</th>
+<th>Valor</th>
 <th>Status</th>
 </tr>
-</thead>
-
-<tbody>
 
 <tr>
-<td>João Silva</td>
-<td>000.000.000-00</td>
-<td>(61) 99999-9999</td>
-<td>joao@email.com</td>
-<td>Ativo</td>
+<td>Janeiro</td>
+<td>R$200</td>
+<td><span class="tag pago">Pago</span></td>
 </tr>
 
-</tbody>
+<tr>
+<td>Fevereiro</td>
+<td>R$200</td>
+<td><span class="tag pago">Pago</span></td>
+</tr>
+
+<tr>
+<td>Março</td>
+<td>R$200</td>
+<td><span class="tag pendente">Pendente</span></td>
+</tr>
 
 </table>
 
-</section>
+</div>
 
-<!-- CONTATO -->
-<section id="contato" class="contato container">
+<!-- CONTRIBUIÇÕES -->
 
-<h2>Suporte ao Associado</h2>
+<div id="contribuicoes" class="page">
 
-<p>
-Caso tenha dúvidas sobre seu cadastro ou associação, entre em contato com a AMAS.
-</p>
+<h1>Minhas Contribuições</h1>
 
-<p><strong>Email:</strong> contato@amas.org</p>
-<p><strong>Telefone:</strong> (61) 99999-9999</p>
+<table>
 
-</section>
-<script type="module" src="js/main.js"></script>
+<tr>
+<th>Data</th>
+<th>Valor</th>
+<th>Tipo</th>
+</tr>
+
+<tr>
+<td>05/01/2026</td>
+<td>R$200</td>
+<td>Mensalidade</td>
+</tr>
+
+<tr>
+<td>05/02/2026</td>
+<td>R$200</td>
+<td>Mensalidade</td>
+</tr>
+
+<tr>
+<td>05/03/2026</td>
+<td>R$200</td>
+<td>Mensalidade</td>
+</tr>
+
+</table>
+
+</div>
+
+<!-- ATUALIZAR DADOS -->
+
+<div id="dados" class="page">
+
+<h1>Atualizar Dados</h1>
+
+<div class="form">
+
+<label>Nome</label>
+<input type="text" value="João Silva">
+
+<label>Email</label>
+<input type="email" value="joao@email.com">
+
+<label>Telefone</label>
+<input type="text" value="(61)99999-9999">
+
+<label>Nova senha</label>
+<input type="password">
+
+<button>Salvar Alterações</button>
+
+</div>
+
+</div>
+
+</div>
+
+<script>
+
+function showPage(page){
+
+document.querySelectorAll(".page").forEach(p=>{
+p.classList.remove("active")
+})
+
+document.getElementById(page).classList.add("active")
+
+}
+
+/* GRÁFICO */
+
+new Chart(document.getElementById("grafico"),{
+
+type:"line",
+
+data:{
+labels:["Out","Nov","Dez","Jan","Fev","Mar"],
+datasets:[{
+label:"Contribuições",
+data:[200,200,200,200,200,200],
+borderWidth:3,
+fill:false
+}]
+}
+
+})
+
+</script>
+
 </body>
 </html>

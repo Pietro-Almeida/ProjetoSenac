@@ -1,58 +1,197 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
+
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Consulta de Associados - Empresários | AMAS</title>
-<link rel="stylesheet" href="css/style.css">
+<title>Painel do Empresário</title>
+
+<link rel="stylesheet" href="css/empresario.css">
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
 </head>
 
 <body>
 
-<!-- SIDEBAR -->
-<aside class="sidebar">
+<div class="sidebar">
 
-  <div class="logo">
-    <img src="" alt="Logo AMAS">
-  </div>
+<h2>Área Empresarial</h2>
 
-  <nav class="menu">
-    <a href="index.html">Início</a>
-    <a href="#consulta">Consultar Associado</a>
-    <a href="#resultado">Resultado</a>
-    <a href="#contato">Contato</a>
-  </nav>
+<ul class="menu">
 
-  <div class="login-menu">
-    <button id="toggle-theme">🌙</button>
-  </div>
+<li onclick="showPage('painel')" class="active">Meu Painel</li>
+<li onclick="showPage('beneficios')">Benefícios</li>
+<li onclick="showPage('divulgacao')">Divulgar Empresa</li>
+<li onclick="showPage('estatisticas')">Estatísticas</li>
+<li onclick="showPage('dados')">Atualizar Dados</li>
+<li>Sair</li>
 
-</aside>
+</ul>
 
-<!-- BANNER -->
-<section class="banner container">
-  <div class="banner-texto">
-    <h1>Consulta de Associados</h1>
-    <p>
-      Empresários parceiros podem verificar se um associado está apto a receber benefícios.
-    </p>
-  </div>
-</section>
+</div>
 
-<!-- CONSULTA -->
-<section id="consulta" class="container">
+<div class="content">
 
-<h2>Consultar Associado</h2>
+<!-- PAINEL -->
 
-<form class="form-consulta">
+<div id="painel" class="page active">
 
-<label>Nome do Associado</label>
-<input type="text" placeholder="Digite o nome do associado" required>
-<label>CPF</label>
-<input type="text" placeholder="000.000.000-00" required>
-<button id="loginEmpresario" type="submit">Consultar</button>
-</form>
-</section>
-<script type="module" src="js/main.js"></script>
+<h1>Bem-vindo, Empresa Silva LTDA</h1>
+
+<div class="cards">
+
+<div class="card">
+<h3>Status da Parceria</h3>
+<p style="color:green;">Ativa</p>
+</div>
+
+<div class="card">
+<h3>Associados alcançados</h3>
+<p>320</p>
+</div>
+
+<div class="card">
+<h3>Benefícios ativos</h3>
+<p>3</p>
+</div>
+
+</div>
+
+</div>
+
+<!-- BENEFÍCIOS -->
+
+<div id="beneficios" class="page">
+
+<h1>Benefícios para Associados</h1>
+
+<table>
+
+<tr>
+<th>Benefício</th>
+<th>Desconto</th>
+<th>Status</th>
+</tr>
+
+<tr>
+<td>Desconto em produtos</td>
+<td>10%</td>
+<td>Ativo</td>
+</tr>
+
+<tr>
+<td>Serviços especiais</td>
+<td>15%</td>
+<td>Ativo</td>
+</tr>
+
+<tr>
+<td>Promoção mensal</td>
+<td>20%</td>
+<td>Ativo</td>
+</tr>
+
+</table>
+
+</div>
+
+<!-- DIVULGAÇÃO -->
+
+<div id="divulgacao" class="page">
+
+<h1>Divulgar Empresa</h1>
+
+<div class="form">
+
+<label>Nome da Empresa</label>
+<input type="text" value="Empresa Silva LTDA">
+
+<label>Descrição</label>
+<textarea rows="4"></textarea>
+
+<label>Site</label>
+<input type="text">
+
+<button>Publicar Divulgação</button>
+
+</div>
+
+</div>
+
+<!-- ESTATÍSTICAS -->
+
+<div id="estatisticas" class="page">
+
+<h1>Estatísticas da Empresa</h1>
+
+<div class="chart">
+
+<canvas id="graficoEmpresa"></canvas>
+
+</div>
+
+</div>
+
+<!-- ATUALIZAR DADOS -->
+
+<div id="dados" class="page">
+
+<h1>Atualizar Dados da Empresa</h1>
+
+<div class="form">
+
+<label>Nome da Empresa</label>
+<input type="text" value="Empresa Silva LTDA">
+
+<label>Email</label>
+<input type="email">
+
+<label>Telefone</label>
+<input type="text">
+
+<label>Endereço</label>
+<input type="text">
+
+<button>Salvar Alterações</button>
+
+</div>
+
+</div>
+
+</div>
+
+<script>
+
+function showPage(page){
+
+document.querySelectorAll(".page").forEach(p=>{
+p.classList.remove("active")
+})
+
+document.getElementById(page).classList.add("active")
+
+}
+
+/* GRÁFICO */
+
+new Chart(document.getElementById("graficoEmpresa"),{
+
+type:"bar",
+
+data:{
+labels:["Jan","Fev","Mar","Abr","Mai","Jun"],
+datasets:[{
+label:"Visualizações da empresa",
+data:[120,180,150,220,260,300],
+borderWidth:1
+}]
+}
+
+})
+
+</script>
+
 </body>
 </html>
