@@ -52,14 +52,16 @@ fill:false
 }
 })
 
-btnToggleTheme.addEventListener("click", ()=> {
-
-document.body.classList.toggle("dark-mode");
-
-if(document.body.classList.contains("dark-mode")){
-toggleTheme.textContent="☀️ Modo Claro";
-}else{
-toggleTheme.textContent="🌙 Modo Escuro";
+if(localStorage.getItem("theme") === "dark"){
+    document.body.classList.add("dark-mode");
 }
 
-}); 
+btnToggleTheme.addEventListener("click", ()=> {
+    document.body.classList.toggle("dark-mode");
+
+    if(document.body.classList.contains("dark-mode")){
+        localStorage.setItem("theme", "dark");
+    } else {
+        localStorage.setItem("theme", "light");
+    }
+});
