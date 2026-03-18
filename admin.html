@@ -21,6 +21,7 @@
 <li onclick="showPage('contribuicoes')">Contribuições</li>
 <li onclick="showPage('pagamentos')">Pagamentos</li>
 <li onclick="showPage('relatorios')">Relatórios</li>
+<li><a href="index.html" class="link-sidebar">Sair</a></li>
 
 </ul>
 
@@ -170,23 +171,6 @@
 </div>
 
 </div>
-<script>
-  function showPage(page){
-
-document.querySelectorAll(".page").forEach(p=>{
-p.classList.remove("active")
-})
-
-document.getElementById(page).classList.add("active")
-
-document.querySelectorAll(".menu li").forEach(li=>{
-li.classList.remove("active")
-})
-
-event.target.classList.add("active")
-
-}
-</script>
 <script type="module" src="js/admin.js"></script>
 </body>
 </html>

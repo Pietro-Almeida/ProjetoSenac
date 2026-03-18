@@ -1,3 +1,26 @@
+export function loginAssociado() {
+
+    const usuario = document.getElementById("cpf").value;
+    const senha = document.getElementById("senha").value;
+
+    // Credenciais fixas
+    const usuarioCorreto = "usuario";
+    const senhaCorreta = "senha";
+
+    if (usuario === usuarioCorreto && senha === senhaCorreta) {
+
+        alert("Login realizado com sucesso!");
+
+        // redireciona para o painel do administrador
+        window.location.href = "empresario.html";
+
+    } else {
+
+        alert("Usuário ou senha incorretos!");
+
+    }
+}
+
 const btnToggleTheme = document.getElementById("toggle-theme")
 
 function showPage(event, page){

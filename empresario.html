@@ -1,15 +1,14 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
 
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Painel do Empresário</title>
 
-<link rel="stylesheet" href="css/empresario.css">
+<link rel="stylesheet" href="css/admin.css">
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
 
 </head>
 
@@ -17,16 +16,16 @@
 
 <div class="sidebar">
 
-<h2>Área Empresarial</h2>
+<button id="toggle-theme"><h2>Área Empresarial</h2></button>
 
 <ul class="menu">
 
-<li onclick="showPage('painel')" class="active">Meu Painel</li>
-<li onclick="showPage('beneficios')">Benefícios</li>
-<li onclick="showPage('divulgacao')">Divulgar Empresa</li>
-<li onclick="showPage('estatisticas')">Estatísticas</li>
-<li onclick="showPage('dados')">Atualizar Dados</li>
-<li>Sair</li>
+<li onclick="showPage(event,'painel')" class="active">Meu Painel</li>
+<li onclick="showPage(event,'beneficios')">Benefícios</li>
+<li onclick="showPage(event,'divulgacao')">Divulgação</li>
+<li onclick="showPage(event,'estatisticas')">Estatísticas</li>
+<li onclick="showPage(event,'dados')">Dados</li>
+<li><a href="index.html" class="link-sidebar">Sair</a></li>
 
 </ul>
 
@@ -44,7 +43,7 @@
 
 <div class="card">
 <h3>Status da Parceria</h3>
-<p style="color:green;">Ativa</p>
+<p><span class="tag ativo">Ativa</span></p>
 </div>
 
 <div class="card">
@@ -65,7 +64,7 @@
 
 <div id="beneficios" class="page">
 
-<h1>Benefícios para Associados</h1>
+<h1>Benefícios</h1>
 
 <table>
 
@@ -78,19 +77,19 @@
 <tr>
 <td>Desconto em produtos</td>
 <td>10%</td>
-<td>Ativo</td>
+<td><span class="tag ativo">Ativo</span></td>
 </tr>
 
 <tr>
 <td>Serviços especiais</td>
 <td>15%</td>
-<td>Ativo</td>
+<td><span class="tag ativo">Ativo</span></td>
 </tr>
 
 <tr>
 <td>Promoção mensal</td>
 <td>20%</td>
-<td>Ativo</td>
+<td><span class="tag ativo">Ativo</span></td>
 </tr>
 
 </table>
@@ -103,7 +102,7 @@
 
 <h1>Divulgar Empresa</h1>
 
-<div class="form">
+<div class="card">
 
 <label>Nome da Empresa</label>
 <input type="text" value="Empresa Silva LTDA">
@@ -114,7 +113,7 @@
 <label>Site</label>
 <input type="text">
 
-<button>Publicar Divulgação</button>
+<button>Publicar</button>
 
 </div>
 
@@ -124,23 +123,21 @@
 
 <div id="estatisticas" class="page">
 
-<h1>Estatísticas da Empresa</h1>
+<h1>Estatísticas</h1>
 
 <div class="chart">
-
 <canvas id="graficoEmpresa"></canvas>
-
 </div>
 
 </div>
 
-<!-- ATUALIZAR DADOS -->
+<!-- DADOS -->
 
 <div id="dados" class="page">
 
-<h1>Atualizar Dados da Empresa</h1>
+<h1>Atualizar Dados</h1>
 
-<div class="form">
+<div class="card">
 
 <label>Nome da Empresa</label>
 <input type="text" value="Empresa Silva LTDA">
@@ -154,7 +151,7 @@
 <label>Endereço</label>
 <input type="text">
 
-<button>Salvar Alterações</button>
+<button>Salvar</button>
 
 </div>
 
@@ -162,36 +159,7 @@
 
 </div>
 
-<script>
-
-function showPage(page){
-
-document.querySelectorAll(".page").forEach(p=>{
-p.classList.remove("active")
-})
-
-document.getElementById(page).classList.add("active")
-
-}
-
-/* GRÁFICO */
-
-new Chart(document.getElementById("graficoEmpresa"),{
-
-type:"bar",
-
-data:{
-labels:["Jan","Fev","Mar","Abr","Mai","Jun"],
-datasets:[{
-label:"Visualizações da empresa",
-data:[120,180,150,220,260,300],
-borderWidth:1
-}]
-}
-
-})
-
-</script>
+<script type="module" src="js/empresario.js"></script>
 
 </body>
 </html>

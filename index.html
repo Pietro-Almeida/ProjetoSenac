@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,104 +9,108 @@
 </head>
 
 <body>
-<!-- CABEÇALHO -->
-<header class="header">
-  <!-- Logo -->
-  <div class="logo">
-    <img src="img/amas.png" alt="Logo AMAS">
-  </div>
-  <!-- Menu -->
-  <nav class="menu">
-    <a href="index.html">Início</a>
-    <a href="#sobre">Sobre</a>
-    <a href="#beneficios">Benefícios</a>
-    <a href="#contato">Contato</a>
-  </nav>
-  
-  <!-- Ações -->
-  <div class="login-menu">
-    <!-- Botão Dark/Light -->
-    <button id="toggle-theme"><p>🌙</p></button>
-    <!-- Botão Login -->
-    <button class="btn-login">Login</button>
-    <div class="login-opcoes">
-      <a href="login-admin.html">Administrador</a>
-      <a href="login-associado.html">Associado</a>
-      <a href="login-empresario.html">Empresário</a>
+  <!-- CABEÇALHO -->
+  <header class="header">
+    <!-- Logo -->
+    <div class="logo">
+      <img src="img/amas.png" alt="Logo AMAS">
     </div>
-  </div>
-</header>
+    <!-- Menu -->
+    <nav class="menu">
+      <a href="index.html">Início</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#beneficios">Benefícios</a>
+      <a href="#contato">Contato</a>
+    </nav>
 
-<!-- BANNER PRINCIPAL -->
-<section class="banner container">
-  <div class="banner-texto">
-    <h1>Fortalecendo associados e criando oportunidades</h1>
+    <!-- Ações -->
+    <div class="login-menu">
+      <!-- Botão Dark/Light -->
+      <button id="toggle-theme">
+        <p>🌙</p>
+      </button>
+      <!-- Botão Login -->
+      <button class="btn-login">Login</button>
+      <div class="login-opcoes">
+        <a href="login-admin.html">Administrador</a>
+        <a href="login-associado.html">Associado</a>
+        <a href="login-empresario.html">Empresário</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- BANNER PRINCIPAL -->
+  <section class="banner container">
+    <div class="banner-texto">
+      <h1>Fortalecendo associados e criando oportunidades</h1>
+      <p>
+        A AMAS é uma associação dedicada a oferecer benefícios,
+        apoio e oportunidades para seus membros.
+      </p>
+      <a href="login-associado.html" id="btn-associar">
+        Clique aqui para se tornar um associado.
+      </a>
+    </div>
+  </section>
+
+  <!--Section Sobre-->
+  <section id="sobre" class="sobre container">
+    <h2>Sobre a AMAS – Associação dos Microempreendedores e Autônomos de São Sebastião</h2>
     <p>
-      A AMAS é uma associação dedicada a oferecer benefícios,
-      apoio e oportunidades para seus membros.
+      <strong>Missões da empresa</strong>
     </p>
-    <a href="login-associado.html" id="btn-associar">
-      Clique aqui para se tornar um associado.
-    </a>
-  </div>
-</section>
-
-<!--Section Sobre-->
-<section id="sobre" class="sobre container">
-     <h2>Sobre a AMAS – Associação dos Microempreendedores e Autônomos de São Sebastião</h2>
-     <p>
-          <strong>Missões da empresa</strong>
-     </p>
-     <p>
-         Na AMAS, nossa missão é transformar ideias em soluções que impactam positivamente a vida das pessoas.
-
-
-     </p>
-     <p>
-        <strong>Valores:</strong>
-     </p>
-     <p>
-          A AMAS da valor aos empresarios que se associaram com ajuda a divulgar seus produtos, crescer o negocio e reconhecer o quao grande o negocio pode ser.
-     </p>
-     <p>
-        <strong>Objetivos:</strong>
-     </p>
     <p>
-       Ajudar o seu negócio a crescer, divulgar seus produtos e parcerias com outras empresas.
+      Na AMAS, nossa missão é transformar ideias em soluções que impactam positivamente a vida das pessoas.
+
+
     </p>
-</section>
-<!--Section Beneficios-->
-<section id="beneficios" class="beneficius container">
-  <h2>Empresas Parceiras.</h2>
-  <p>
-    Oba, Americanas, Fiat, Microsoft e Dell technologies
-  </p>
-</section>
-<!--Section Contato-->
-<section id="contato" class="contato container">
-  <h2>Entre em contato</h2>
-  <p>
-    Se você deseja saber mais sobre a Associação AMAS, tirar dúvidas ou enviar sugestões, entre em contato conosco.
-  </p>
+    <p>
+      <strong>Valores:</strong>
+    </p>
+    <p>
+      A AMAS da valor aos empresarios que se associaram com ajuda a divulgar seus produtos, crescer o negocio e
+      reconhecer o quao grande o negocio pode ser.
+    </p>
+    <p>
+      <strong>Objetivos:</strong>
+    </p>
+    <p>
+      Ajudar o seu negócio a crescer, divulgar seus produtos e parcerias com outras empresas.
+    </p>
+  </section>
+  <!--Section Beneficios-->
+  <section id="beneficios" class="beneficius container">
+    <h2>Empresas Parceiras.</h2>
+    <p>
+      Oba, Americanas, Fiat, Microsoft e Dell technologies
+    </p>
+  </section>
+  <!--Section Contato-->
+  <section id="contato" class="contato container">
+    <h2>Entre em contato</h2>
+    <p>
+      Se você deseja saber mais sobre a Associação AMAS, tirar dúvidas ou enviar sugestões, entre em contato conosco.
+    </p>
 
-  <form>
-    <label>Nome</label>
-    <input type="text" placeholder="Digite seu nome" required>
-    <label>Email</label>
-    <input type="email" placeholder="Digite seu email" required>
-    <label>Telefone</label>
-    <input type="tel" placeholder="Digite seu telefone">
-    <label>Mensagem</label>
-    <textarea placeholder="Digite sua mensagem"></textarea>
-    <button type="submit">Enviar mensagem</button>
-  </form>
+    <form>
+      <label>Nome</label>
+      <input type="text" placeholder="Digite seu nome" required>
+      <label>Email</label>
+      <input type="email" placeholder="Digite seu email" required>
+      <label>Telefone</label>
+      <input type="tel" placeholder="Digite seu telefone">
+      <label>Mensagem</label>
+      <textarea placeholder="Digite sua mensagem"></textarea>
+      <button type="submit">Enviar mensagem</button>
+    </form>
 
-  <div class="info-contato">
-    <p><strong>Endereço:</strong> São Sebastião - DF</p>
-    <p><strong>Email:</strong> contato@amas.org</p>
-    <p><strong>Telefone:</strong> (61) 99999-9999</p>
-  </div>
-</section>
-<script type="module" src="js/main.js"></script>
+    <div class="info-contato">
+      <p><strong>Endereço:</strong> São Sebastião - DF</p>
+      <p><strong>Email:</strong> contato@amas.org</p>
+      <p><strong>Telefone:</strong> (61) 99999-9999</p>
+    </div>
+  </section>
+  <script type="module" src="js/main.js"></script>
 </body>
+
 </html>
