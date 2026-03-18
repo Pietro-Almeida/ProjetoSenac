@@ -8,23 +8,28 @@ const buttonLoginAdmin = document.getElementById("loginAdmin")
 const buttonLoginAssociado = document.getElementById("loginAssociado")
 const buttonLoginEmpresario = document.getElementById("loginEmpresario")
 
-btnTema.addEventListener("click", ()=> {
+btnTema.addEventListener("click", () => {
   document.body.classList.toggle("black")
   btnTema.innerHTML = document.body.classList.contains("black") ? "☀️" : "🌙"
 })
 
-if(buttonLoginAdmin)
-  buttonLoginAdmin.addEventListener("click", ()=>{
+if (buttonLoginAdmin)
+  buttonLoginAdmin.addEventListener("click", () => {
     loginAdmin();
   })
-if(buttonLoginAssociado){
-  buttonLoginAssociado.addEventListener("click", ()=>{
+if (buttonLoginAssociado) {
+  buttonLoginAssociado.addEventListener("click", () => {
     loginAssociado();
   })
 }
-if(buttonLoginEmpresario){
-  buttonLoginEmpresario.addEventListener("click", ()=>{
+if (buttonLoginEmpresario) {
+  buttonLoginEmpresario.addEventListener("click", () => {
     loginEmpresario();
   })
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+  const btn = document.getElementById('loginAdmin');
+  if (btn) btn.addEventListener('click', loginAdmin);
+});
 
