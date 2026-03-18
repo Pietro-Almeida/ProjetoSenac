@@ -231,7 +231,7 @@ transform:translateY(0);
 
 th,td{
 padding:14px;
-border-bottom:1px solid var(--cor-card);
+border-bottom:1px solid var(--texto-principal);
 }
 
 th{
