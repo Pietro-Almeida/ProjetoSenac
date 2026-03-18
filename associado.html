@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
 
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Painel do Associado</title>
-<link rel="stylesheet" href="css/associado.css">
+
+<link rel="stylesheet" href="css/admin.css"> <!-- reutiliza o mesmo CSS -->
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
@@ -19,11 +20,11 @@
 
 <ul class="menu">
 
-<li onclick="showPage('painel')" class="active">Meu Painel</li>
-<li onclick="showPage('pagamentos')">Meus Pagamentos</li>
-<li onclick="showPage('contribuicoes')">Minhas Contribuições</li>
-<li onclick="showPage('dados')">Atualizar Dados</li>
-<li>Sair</li>
+<li onclick="showPage(event,'painel')" class="active">Meu Painel</li>
+<li onclick="showPage(event,'pagamentos')">Pagamentos</li>
+<li onclick="showPage(event,'contribuicoes')">Contribuições</li>
+<li onclick="showPage(event,'dados')">Atualizar Dados</li>
+<li><a href="index.html" class="link-sidebar">Sair</a></li>
 
 </ul>
 
@@ -31,7 +32,7 @@
 
 <div class="content">
 
-<!-- MEU PAINEL -->
+<!-- PAINEL -->
 
 <div id="painel" class="page active">
 
@@ -40,8 +41,8 @@
 <div class="cards">
 
 <div class="card">
-<h3>Status da Associação</h3>
-<p style="color:green;">Ativo</p>
+<h3>Status</h3>
+<p><span class="tag ativo">Ativo</span></p>
 </div>
 
 <div class="card">
@@ -57,9 +58,7 @@
 </div>
 
 <div class="chart">
-
 <canvas id="grafico"></canvas>
-
 </div>
 
 </div>
@@ -71,7 +70,6 @@
 <h1>Meus Pagamentos</h1>
 
 <table>
-
 <tr>
 <th>Mês</th>
 <th>Valor</th>
@@ -107,7 +105,6 @@
 <h1>Minhas Contribuições</h1>
 
 <table>
-
 <tr>
 <th>Data</th>
 <th>Valor</th>
@@ -136,13 +133,13 @@
 
 </div>
 
-<!-- ATUALIZAR DADOS -->
+<!-- DADOS -->
 
 <div id="dados" class="page">
 
 <h1>Atualizar Dados</h1>
 
-<div class="form">
+<div class="card">
 
 <label>Nome</label>
 <input type="text" value="João Silva">
@@ -156,7 +153,7 @@
 <label>Nova senha</label>
 <input type="password">
 
-<button>Salvar Alterações</button>
+<button>Salvar</button>
 
 </div>
 
@@ -164,37 +161,7 @@
 
 </div>
 
-<script>
-
-function showPage(page){
-
-document.querySelectorAll(".page").forEach(p=>{
-p.classList.remove("active")
-})
-
-document.getElementById(page).classList.add("active")
-
-}
-
-/* GRÁFICO */
-
-new Chart(document.getElementById("grafico"),{
-
-type:"line",
-
-data:{
-labels:["Out","Nov","Dez","Jan","Fev","Mar"],
-datasets:[{
-label:"Contribuições",
-data:[200,200,200,200,200,200],
-borderWidth:3,
-fill:false
-}]
-}
-
-})
-
-</script>
+<script src="js/associado.js"></script>
 
 </body>
 </html>
