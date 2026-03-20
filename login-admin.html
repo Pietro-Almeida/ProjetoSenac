@@ -4,37 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AMAS</title>
-  <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-  <header class="header">
+
+<header class="header">
     <!-- Logo -->
     <div class="logo">
-      <img src="img/amas.png" alt="Logo AMAS">
+        <img src="img/amas.png" alt="Logo AMAS">
     </div>
+
     <!-- Menu -->
     <nav class="menu">
-      <a href="index.html">Início</a>
-      <a href="#sobre">Sobre</a>
-      <a href="#beneficios">Benefícios</a>
-      <a href="#contato">Contato</a>
+        <a href="index.html">Início</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#beneficios">Benefícios</a>
+        <a href="#contato">Contato</a>
     </nav>
+
     <!-- Ações -->
     <div class="acoes">
-      <!-- Botão Dark/Light -->
-      <button id="toggle-theme">🌙</button>
-      <!-- Botão Login -->
-      <button class="btn-login">Login</button>
+        <button id="toggle-theme">🌙</button>
+        <button class="btn-login">Login</button>
     </div>
 </header>
-    <div class="login-container">
-      <h2>Login do Administrador</h2>
-      <p>Acesso restrito ao painel administrativo.</p>
-      <input type="text" id="usuario" placeholder="Usuário">
-      <input type="password" id="senha" placeholder="Senha">
-      <button id="loginAdmin">Entrar</button>
-    </div>
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-<script type="module" src="js/main.js"></script>
+
+<div class="login-container">
+    <h2>Login do Administrador</h2>
+    <p>Acesso restrito ao painel administrativo.</p>
+
+    <input type="text" id="usuario" placeholder="Usuário">
+    <input type="password" id="senha" placeholder="Senha">
+
+    <!-- 🔧 CORREÇÃO: mantive o id e vamos ligar ele no JS -->
+    <button id="loginAdmin">Entrar</button>
+</div>
+
+<!-- ❌ REMOVIDO type="module" (isso impedia a função de login de funcionar corretamente) -->
+<script src="js/main.js"></script>
+
 </body>
 </html>
