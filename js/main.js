@@ -1,32 +1,34 @@
-// 🔧 CORREÇÃO: REMOVIDO "export" (isso estava quebrando o acesso à função)
-function loginAdmin() {
+import { loginAdmin } from "./admin.js";
+import { loginAssociado } from "./associado.js";
+import { loginEmpresario } from "./empresario.js";
 
-    const usuario = document.getElementById("usuario").value;
-    const senha = document.getElementById("senha").value;
-
-    const usuarioCorreto = "usuario";
-    const senhaCorreta = "senha";
-
-    if (usuario === usuarioCorreto && senha === senhaCorreta) {
-
-        alert("Login realizado com sucesso!");
-
-        // ✅ REDIRECIONAMENTO (já estava certo)
-        window.location.href = "admin.html";
-
-    } else {
-        alert("Usuário ou senha incorretos!");
-    }
-}
 
 // 🔧 CORREÇÃO: ADICIONADO evento para o botão funcionar
 window.addEventListener("DOMContentLoaded", () => {
     const btnToggleTheme = document.getElementById("toggle-theme");
+    const btnLoginAdmin = document.getElementById("loginAdmin");
+    const btnLoginAssociado = document.getElementById("loginAssociado");
+    const btnLoginEmpresario = document.getElementById("loginEmpresario");
 
-    const botao = document.getElementById("loginAdmin");
+    if (btnLoginAdmin) {
+        btnLoginAdmin.addEventListener("click", (e) => {
+            e.preventDefault();
+            loginAdmin(); // loginAdmin já faz alert + redirect
+        });
+    }
 
-    if (botao) {
-        botao.addEventListener("click", loginAdmin);
+    if (btnLoginAssociado) {
+        btnLoginAssociado.addEventListener("click", (e) => {
+            e.preventDefault();
+            loginAssociado(); // loginAssociado já faz alert + redirect
+        });
+    }
+
+    if (btnLoginEmpresario) {
+        btnLoginEmpresario.addEventListener("click", (e) => {
+            e.preventDefault();
+            loginEmpresario(); // loginEmpresario já faz alert + redirect
+        });
     }
 
     if (btnToggleTheme) {
@@ -34,4 +36,4 @@ window.addEventListener("DOMContentLoaded", () => {
             document.body.classList.toggle("black");
         });
     }
-    });
+});
