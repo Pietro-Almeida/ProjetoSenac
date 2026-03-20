@@ -8,23 +8,19 @@
 </head>
 <body>
   <header class="header">
-  <!-- Logo -->
   <div class="logo">
     <img src="img/amas.png" alt="Logo AMAS">
   </div>
-  <!-- Menu -->
+
   <nav class="menu">
     <a href="index.html">Início</a>
     <a href="#sobre">Sobre</a>
     <a href="#beneficios">Benefícios</a>
     <a href="#contato">Contato</a>
   </nav>
-  
-  <!-- Ações -->
+
   <div class="login-menu">
-    <!-- Botão Dark/Light -->
     <button id="toggle-theme">🌙</button>
-    <!-- Botão Login -->
     <button class="btn-login">Login</button>
     <div class="login-opcoes">
       <a href="login-admin.html">Administrador</a>
@@ -37,10 +33,16 @@
   <div class="login-container">
     <h2>Login do Associado</h2>
     <p>Acesse sua área para acompanhar contribuições e situação financeira.</p>
+
+    <!-- 🔧 OK -->
     <input type="text" id="cpf" placeholder="Digite seu CPF">
-    <input type="password" id="senha" placeholder="Digite sua senha">
+
+    <!-- 🔧 ERRO: id "senha" já é usado no admin → pode causar conflito -->
+    <input type="password" id="senhaAssociado" placeholder="Digite sua senha">
+
     <button id="loginAssociado">Entrar</button>
   </div>
+
 <script type="module" src="js/main.js"></script>
 </body>
 </html>
